@@ -23,6 +23,8 @@ then
     echo -e "\nError!"
     echo -e "./sortip.sh [filepath]"
 else
+    echo -e "\n logging to top_ten_ip.txt"
+
     #get offending ip addresses and sort/count them. output them to the file.
     grep -ie "failed password for" $1 | grep -o -e '[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}'| sort \
     | uniq -c | sort -n -r |head -n 10 >> top_ten_ip.txt

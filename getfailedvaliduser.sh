@@ -23,6 +23,8 @@ then
     echo -e "\nError!"
     echo -e "./getfailedvaliduser.sh [filepath]"
 else
+    echo -e "\n logging to top_10_target_names.txt"
+
     #get offending usernames that are NOT invalid and sort/count them
     grep -ie "failed password for " $1 | grep -ive "invalid" | awk '{print $9}' | sort \
     | uniq -c | sort -n -r |head -n 10 >>  top_10_target_names.txt
