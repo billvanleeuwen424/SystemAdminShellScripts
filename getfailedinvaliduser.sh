@@ -18,7 +18,7 @@ then
 fi
 
 
-if [ -z $1 ];
+if [[ -z $1 ]];
 then 
     echo -e "\nError!"
     echo -e "./getfailedinvaliduser.sh [filepath]"
