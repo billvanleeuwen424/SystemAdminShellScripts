@@ -9,7 +9,7 @@
 #
 #   Written By: William Van Leeuwen, January 2022
 #   
-#   Usage: ./getfailedvaliduser.sh [filename]
+#   Usage: ./getfailedvaliduser.sh [filepath]
 
 #clear the list if exists
 if [[ -f top_10_target_names.txt ]]
